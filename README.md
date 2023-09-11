@@ -1,3 +1,3 @@
 # Xgame4
 
-vue
+vue.
