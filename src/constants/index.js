@@ -16,8 +16,6 @@ import {
   figma,
   docker,
   meta,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
@@ -25,6 +23,9 @@ import {
 } from "../assets";
 
 import sompo from "../assets/company/sompo.png";
+import poznan from "../assets/company/poznan.png";
+import eru from "../assets/company/eru.png";
+import patika from "../assets/company/patika.png";
 
 export const navLinks = [
   {
@@ -130,37 +131,38 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const education = [
   {
     title: "Master of Science - Product Engineering",
     company_name: "Politechnika Poznanska",
-    icon: sompo,
+    icon: poznan,
     iconBg: "#E6DEDD",
-    date: "From February 2023 to July 2024",
-    location: "Poznan, Poland",
+    date: "February 2023 - July 2024",
+    location: " Poznan Poland",
     points: [],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Full Stack Bootcamp",
+    company_name: "Patika.dev",
+    icon: patika,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    location: "Remote",
+    date: "October 2022 - March 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -169,30 +171,13 @@ const education = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Aeronautical Engineering",
+    company_name: "Erciyes University",
+    icon: eru,
+    location: "  Turkey",
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+    date: "September 2018 - September 2022",
+    points: [],
   },
 ];
 
