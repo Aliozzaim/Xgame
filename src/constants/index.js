@@ -16,7 +16,6 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
   tesla,
   shopify,
   carrent,
@@ -24,6 +23,8 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+
+import sompo from "../assets/company/sompo.png";
 
 export const navLinks = [
   {
@@ -116,17 +117,43 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Frontend Developer intern",
+    company_name: "Sompo Sigorta",
+    icon: sompo,
+    location: "Istanbul, Turkey (Remote)",
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
+    points: [
+      "Technologies: Vue.js, React.js, PrimeReact, Tailwind.",
+      "Maintained and improved the client portal web applications.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Full stack Developer",
+    company_name: "Meta",
+    icon: meta,
+    iconBg: "#E6DEDD",
+    date: "Jan 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
+  },
+];
+
+const education = [
+  {
+    title: "Master of Science - Product Engineering",
+    company_name: "Politechnika Poznanska",
+    icon: sompo,
+    iconBg: "#E6DEDD",
+    date: "From February 2023 to July 2024",
+    location: "Poznan, Poland",
+    points: [],
   },
   {
     title: "React Native Developer",
@@ -262,4 +289,11 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  education,
+};
