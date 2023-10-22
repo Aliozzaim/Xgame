@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
@@ -23,7 +22,7 @@ const EarthCanvas = () => {
       camera={{
         fov: 45,
         near: 0.1,
-        far: 200,
+        far: 100,
         position: [-4, 3, 6],
       }}
     >
@@ -35,7 +34,6 @@ const EarthCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
-
         <Preload all />
       </Suspense>
     </Canvas>
