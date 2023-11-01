@@ -1,17 +1,24 @@
-/* eslint-disable */
-import { useState, useRef, Suspense } from "react";
+import React, { useState, useRef, Suspense } from "react";
+import PropTypes from "prop-types";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.1 })
-  );
+
+  // Generate sphere positions with no NaN values
+  const [sphere] = useState(() => {
+    const positions = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+    // Filter out NaN values
+    const sanitizedSphere = Array.from(positions).filter(
+      (value) => !isNaN(value)
+    );
+    return new Float32Array(sanitizedSphere);
+  });
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 280;
+    ref.current.rotation.x -= delta / 300;
     ref.current.rotation.y -= delta / 400;
   });
 
@@ -33,7 +40,10 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
-      <Canvas preserveDrawingBuffer={true} camera={{ position: [0, 0, 1] }}>
+      <Canvas
+        gl={{ preserveDrawingBuffer: true }}
+        camera={{ position: [0, 0, 1] }}
+      >
         <Suspense fallback={null}>
           <Stars />
         </Suspense>

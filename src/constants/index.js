@@ -17,13 +17,14 @@ import {
   tripguide,
   threejs,
 } from "../assets";
-import ecommerce from "../assets";
-import garden from "../assets";
 
 import sompo from "../assets/company/sompo.png";
 import poznan from "../assets/company/poznan.png";
 import eru from "../assets/company/eru.png";
 import patika from "../assets/company/patika.png";
+
+import ecommerce from "../assets/ecommerce.png";
+import garden from "../assets/garden.png";
 
 export const navLinks = [
   {
@@ -227,7 +228,7 @@ const projects = [
   {
     name: "E-Commerce",
     description:
-      "E-Commerce Web App provides grid and slide product views, dynamic user navigation, and an admin panel for efficient product and order management. Users can seamlessly browse and shop for products, while administrators have access to powerful tools for managing them. It is meticulously designed to deliver a contemporary and hassle-free shopping experience",
+      "E-Commerce Web App provides grid and slide product views, dynamic user navigation, and an admin panel for efficient product and order management. Users can seamlessly browse and shop for products, while administrators have access to powerful tools for managing them.",
     tags: [
       {
         name: "React.js",
@@ -248,7 +249,7 @@ const projects = [
   {
     name: "Garden Planner",
     description:
-      "Garden Planner is a web application that showcases a responsive image gallery with a Masonry layout. It allows users to explore a collection of images, view them in a modal, and navigate through a slideshow. The application also features a search functionality for easy image discovery.",
+      "AdTask is a web application that showcases a responsive image gallery with a Masonry layout. It allows users to explore a collection of images, view them in a modal, and navigate through a slideshow. The application also features a search functionality for easy image discovery.",
     tags: [
       {
         name: "JavaScript",
