@@ -22,28 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-env
+*.bak
+
 
 .env
+!.env.example
 
 
-#node_modules isimli klasörün tamamı göz ardı edilir.
 node_modules/
 
-#node_modules isimli klasörün tamamı göz ardı edilsin fakat test.json izlenmeye devam etsin
+
 !node_modules/test.json
 
-#json uzantılı dosyaların tamamı göz ardı edilsin fakat test.json izlenmeye devam etsin
+
 *.json
 !test.json
 
-#node_modules isimli klasörün içerisindeki tüm .json uzantılı dosyaları göz ardı edilsin
+
 node_modules/*.json
 
-#node_modules isimli klasörün içerisindeki uzantısı ne olursa olsun tüm test isimli dosyalar göz ardı edilsin
+
 node_modules/test.*
 
-#temp isimli klasörün içerisindeki tüm alt klasörlerin içerisinde bulunan .json uzantılı dosyalar göz ardı edilsin
+
 temp/**/*.json
 
 
