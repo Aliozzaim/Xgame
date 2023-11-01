@@ -14,11 +14,11 @@ import {
   mongodb,
   git,
   figma,
-  carrent,
-  jobit,
   tripguide,
   threejs,
 } from "../assets";
+import ecommerce from "../assets";
+import garden from "../assets";
 
 import sompo from "../assets/company/sompo.png";
 import poznan from "../assets/company/poznan.png";
@@ -204,12 +204,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Trip Guide",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This project is a full-stack application that allows users to create, view, update, and delete places. It consists of a backend API built with Node.js, Express.js, and MongoDB, and a frontend user interface built with React.js.",
     tags: [
       {
-        name: "react",
+        name: "react.js",
         color: "blue-text-gradient",
       },
       {
@@ -217,45 +217,45 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Express.js",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/Aliozzaim",
+    image: tripguide,
+    source_code_link: "https://github.com/Aliozzaim/TravelExplorer",
   },
   {
-    name: "Job IT",
+    name: "E-Commerce",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "E-Commerce Web App provides grid and slide product views, dynamic user navigation, and an admin panel for efficient product and order management. Users can seamlessly browse and shop for products, while administrators have access to powerful tools for managing them. It is meticulously designed to deliver a contemporary and hassle-free shopping experience",
     tags: [
       {
-        name: "react",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Context API",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Formik",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/Aliozzaim",
+    image: ecommerce,
+    source_code_link: "https://github.com/Aliozzaim/eCommerce-WebSite",
   },
   {
-    name: "Trip Guide",
+    name: "Garden Planner",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Garden Planner is a web application that showcases a responsive image gallery with a Masonry layout. It allows users to explore a collection of images, view them in a modal, and navigate through a slideshow. The application also features a search functionality for easy image discovery.",
     tags: [
       {
-        name: "nextjs",
+        name: "JavaScript",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Masonry",
         color: "green-text-gradient",
       },
       {
@@ -263,8 +263,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/Aliozzaim",
+    image: garden,
+    source_code_link: "https://github.com/Aliozzaim/AdTask",
   },
 ];
 
