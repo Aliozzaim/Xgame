@@ -23,7 +23,7 @@ import poznan from "../assets/company/poznan.png";
 import eru from "../assets/company/eru.png";
 import patika from "../assets/company/patika.png";
 
-import ecommerce from "../assets/ecommerce.png";
+import ecommerce from "../assets/3DGallery.png";
 import garden from "../assets/garden.png";
 
 export const navLinks = [
@@ -226,25 +226,25 @@ const projects = [
     source_code_link: "https://github.com/Aliozzaim/TravelExplorer",
   },
   {
-    name: "E-Commerce",
+    name: "3D Art Gallery",
     description:
-      "E-Commerce Web App provides grid and slide product views, dynamic user navigation, and an admin panel for efficient product and order management. Users can seamlessly browse and shop for products, while administrators have access to powerful tools for managing them.",
+      "This project demonstrates my web development skills through visually appealing 3D scenes and animations. With a user-friendly interface on any device, the gallery seamlessly integrates interactive elements, showcasing the captivating potential of art and technology. ",
     tags: [
       {
         name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "Context API",
+        name: "three.js",
         color: "green-text-gradient",
       },
       {
-        name: "Formik",
+        name: "three-fiber.js",
         color: "pink-text-gradient",
       },
     ],
     image: ecommerce,
-    source_code_link: "https://github.com/Aliozzaim/eCommerce-WebSite",
+    source_code_link: "https://vercel.com/aliozzaim/3d-gallery",
   },
   {
     name: "Garden Planner",
