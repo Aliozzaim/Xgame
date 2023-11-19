@@ -244,7 +244,7 @@ const projects = [
       },
     ],
     image: ecommerce,
-    source_code_link: "https://vercel.com/aliozzaim/3d-gallery",
+    source_code_link: "https://3d-gallery-lime.vercel.app/",
   },
   {
     name: "Garden Planner",
