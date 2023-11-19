@@ -118,12 +118,12 @@ const experiences = [
     icon: sompo,
     location: "Istanbul, Turkey (Remote)",
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "February 2023 - September 2022",
     points: [
       "Technologies: Vue.js, React.js, PrimeReact, Tailwind.",
       "Maintained and improved the client portal web applications.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I contributed to the development of the word application, which uses +200 thousand users in the Android market.",
     ],
   },
   // {
