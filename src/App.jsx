@@ -20,14 +20,14 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
+        <About />
         <div className="relative z-0">
-          <About />
+          <StarsCanvas />
           <Experience />
           <Education />
           <Tech />
           <Works />
           <Contact />
-          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>

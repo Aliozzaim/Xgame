@@ -10,7 +10,7 @@ import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import Works from "./Works";
-
+import Animation from "./Animation";
 import Contact from "./Contact";
 
 export {
@@ -25,4 +25,5 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  Animation,
 };
