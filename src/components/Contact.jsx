@@ -95,7 +95,7 @@ const Contact = () => {
         });
         setTimeout(() => {
           setLoading(false);
-        }, 1200);
+        }, 1100);
         setSubmitMessage(
           "Thank you. I will get back to you as soon as possible."
         );
