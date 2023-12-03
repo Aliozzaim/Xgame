@@ -9,9 +9,16 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
   const formRef = useRef();
   const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
     name: "",
     email: "",
     message: "",
@@ -27,10 +34,44 @@ const Contact = () => {
       ...form,
       [name]: value,
     });
+
+    setErrors({
+      ...errors,
+      [name]: "",
+    });
+  };
+
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = {};
+
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.email.trim() || !emailRegex.test(form.email)) {
+      newErrors.email = "Valid email is required";
+      isValid = false;
+    }
+
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -47,18 +88,24 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
         setForm({
           name: "",
           email: "",
           message: "",
         });
+        setTimeout(() => {
+          setLoading(false);
+        }, 1300);
+        setSubmitMessage(
+          "Thank you. I will get back to you as soon as possible."
+        );
+        setIsSubmitted(true);
       })
       .catch((error) => {
+        setIsSubmitted(true);
         setLoading(false);
         console.error(error);
-        alert("Ahh, something went wrong. Please try again.");
+        setSubmitMessage("Ahh, something went wrong. Please try again.");
       });
   };
 
@@ -88,6 +135,7 @@ const Contact = () => {
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            <p className="text-red-500 mt-1">{errors.name}</p>
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
@@ -99,6 +147,7 @@ const Contact = () => {
               placeholder="What's your web address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            <p className="text-red-500 mt-1">{errors.email}</p>
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -110,6 +159,7 @@ const Contact = () => {
               placeholder="What you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            <p className="text-red-500 mt-1">{errors.message}</p>
           </label>
 
           <button
@@ -118,8 +168,19 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
-          <Animation visibility={isSubmitted} />
+          <Animation visibility={loading} />
         </form>
+        {isSubmitted && (
+          <div
+            className={`mt-4 text-white ${
+              submitMessage.includes("Thank")
+                ? "text-green-500"
+                : "text-red-500"
+            }`}
+          >
+            {submitMessage}
+          </div>
+        )}
       </motion.div>
 
       <motion.div
