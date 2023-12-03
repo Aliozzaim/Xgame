@@ -32,16 +32,15 @@ node_modules/
 !node_modules/test.json
 
 
-*.json
+
 !test.json
 
 
-node_modules/*.json
+
 
 
 node_modules/test.*
 
 
-temp/**/*.json
 
 
