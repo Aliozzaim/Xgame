@@ -22,6 +22,7 @@ import sompo from "../assets/company/sompo.png";
 import poznan from "../assets/company/poznan.png";
 import eru from "../assets/company/eru.png";
 import patika from "../assets/company/patika.png";
+import fiver from "../assets/company/fiverr.jpg";
 
 import ecommerce from "../assets/3DGallery.png";
 import garden from "../assets/garden.png";
@@ -113,6 +114,22 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Full stack Developer",
+    company_name: "fiverr",
+    location: "Remote",
+    icon: fiver,
+    iconBg: "#E6DEDD",
+    date: "September 2023 - Present",
+    points: [
+      "Successfully utilized Next.js to build fast-loading, server-rendered React applications.",
+      "Proactively reached out to clients to understand their needs and offered helpful suggestions.",
+      "Worked on API development, ensuring efficient and secure data exchange.",
+      "Managed databases to ensure data integrity and optimal performance.",
+      "Optimized servers for improved application speed and reliability.",
+    ],
+  },
+
+  {
     title: "Frontend Developer intern",
     company_name: "Sompo Sigorta",
     icon: sompo,
@@ -126,19 +143,6 @@ const experiences = [
       "I contributed to the development of the word application, which uses +200 thousand users in the Android market.",
     ],
   },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 const education = [
