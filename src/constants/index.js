@@ -16,16 +16,18 @@ import {
   figma,
   tripguide,
   threejs,
-} from "../assets";
+} from "../assets"
 
-import sompo from "../assets/company/sompo.png";
-import poznan from "../assets/company/poznan.png";
-import eru from "../assets/company/eru.png";
-import patika from "../assets/company/patika.png";
-import fiver from "../assets/company/fiverr.jpg";
+import sompo from "../assets/company/sompo.png"
+import poznan from "../assets/company/poznan.png"
+import eru from "../assets/company/eru.png"
+import patika from "../assets/company/patika.png"
+import fiver from "../assets/company/fiverr.jpg"
 
-import ecommerce from "../assets/3DGallery.png";
-import garden from "../assets/garden.png";
+import nakilport from "../assets/nakilport2.png"
+import MercanSoft from "../assets/mercansoft.png"
+import ecommerce from "../assets/3DGallery.png"
+import garden from "../assets/garden.png"
 
 export const navLinks = [
   {
@@ -40,7 +42,7 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-];
+]
 
 const services = [
   {
@@ -59,7 +61,7 @@ const services = [
     title: "Content Creator",
     icon: creator,
   },
-];
+]
 
 const technologies = [
   {
@@ -110,7 +112,7 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-];
+]
 
 const experiences = [
   {
@@ -143,7 +145,7 @@ const experiences = [
       "I contributed to the development of the word application, which uses +200 thousand users in the Android market.",
     ],
   },
-];
+]
 
 const education = [
   {
@@ -178,7 +180,7 @@ const education = [
     date: "September 2018 - September 2022",
     points: [],
   },
-];
+]
 
 const testimonials = [
   {
@@ -205,37 +207,61 @@ const testimonials = [
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
-];
+]
 
 const projects = [
   {
-    name: "Trip Guide",
+    name: "NakilPort",
     description:
-      "This project is a full-stack application that allows users to create, view, update, and delete places. It consists of a backend API built with Node.js, Express.js, and MongoDB, and a frontend user interface built with React.js.",
+      "NakilPort is a platform that connects carriers and shippers. It allows carriers to find loads and shippers to find carriers. The platform is built with Next.js and Firebase, and it features a responsive design, user authentication, and a restful API.",
     tags: [
       {
-        name: "react.js",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "restFul API",
         color: "green-text-gradient",
       },
       {
-        name: "Express.js",
+        name: "Firebase",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    demoLink: "https://nakilport.vercel.app/",
+    image: nakilport,
+    source_code_link: "https://github.com/Aliozzaim/TansportationWEB",
+  },
+
+  {
+    name: "MercanSoft",
+    description:
+      "MercanSoft is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://mercansoft.vercel.app/",
+    image: MercanSoft,
     source_code_link: "https://github.com/Aliozzaim/TravelExplorer",
   },
   {
-    name: "3D Art Gallery",
+    name: "3D Art Exhibition",
     description:
       "This project demonstrates my web development skills through visually appealing 3D scenes and animations. With a user-friendly interface on any device, the gallery seamlessly integrates interactive elements, showcasing the captivating potential of art and technology. ",
     tags: [
       {
-        name: "React.js",
+        name: "JavaScript",
         color: "blue-text-gradient",
       },
       {
@@ -243,10 +269,11 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "three-fiber.js",
+        name: "CSS",
         color: "pink-text-gradient",
       },
     ],
+    demoLink: "https://3d-gallery-lime.vercel.app/",
     image: ecommerce,
     source_code_link: "https://3d-gallery-lime.vercel.app/",
   },
@@ -268,10 +295,34 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    demoLink: "https://adtask-jet.vercel.app/",
     image: garden,
     source_code_link: "https://github.com/Aliozzaim/AdTask",
   },
-];
+
+  {
+    name: "Trip Guide",
+    description:
+      "This project is a full-stack application that allows users to create, view, update, and delete places. It consists of a backend API built with Node.js, Express.js, and MongoDB, and a frontend user interface built with React.js.",
+    tags: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://github.com/Aliozzaim/TravelExplorer",
+    image: tripguide,
+    source_code_link: "https://github.com/Aliozzaim/TravelExplorer",
+  },
+]
 
 export {
   services,
@@ -280,4 +331,4 @@ export {
   testimonials,
   projects,
   education,
-};
+}
