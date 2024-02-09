@@ -228,9 +228,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    demoLink: "https://nakilport.vercel.app/",
+    demoLink: "https://nakilport.com/",
     image: nakilport,
-    source_code_link: "https://github.com/Aliozzaim/TansportationWEB",
+    source_code_link: "https://nakilport.com/",
   },
 
   {
