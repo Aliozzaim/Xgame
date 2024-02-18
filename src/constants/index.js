@@ -26,7 +26,7 @@ import fiver from "../assets/company/fiverr.jpg"
 
 import nakilport from "../assets/nakilport2.png"
 import MercanSoft from "../assets/mercansoft.png"
-import ecommerce from "../assets/3DGallery.png"
+import ecommerce from "../assets/art.png"
 import garden from "../assets/garden.png"
 
 export const navLinks = [
