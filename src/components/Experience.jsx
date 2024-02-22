@@ -1,17 +1,17 @@
 /* eslint-disable */
-import React from "react";
+import React from "react"
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+} from "react-vertical-timeline-component"
+import { motion } from "framer-motion"
 
-import "react-vertical-timeline-component/style.min.css";
+import "react-vertical-timeline-component/style.min.css"
 
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { styles } from "../styles"
+import { experiences } from "../constants"
+import { SectionWrapper } from "../hoc"
+import { textVariant } from "../utils/motion"
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -55,8 +55,8 @@ const ExperienceCard = ({ experience }) => {
         ))}
       </ul>
     </VerticalTimelineElement>
-  );
-};
+  )
+}
 
 const Experience = () => {
   return (
@@ -66,7 +66,7 @@ const Experience = () => {
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          Work Experience
         </h2>
       </motion.div>
 
@@ -81,7 +81,7 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "work")

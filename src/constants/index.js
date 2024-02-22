@@ -117,7 +117,7 @@ const technologies = [
 const experiences = [
   {
     title: "Full stack Developer",
-    company_name: "fiverr",
+    company_name: "Freelancer",
     location: "Remote",
     icon: fiver,
     iconBg: "#E6DEDD",
@@ -220,7 +220,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "restFul API",
+        name: "RestFul API",
         color: "green-text-gradient",
       },
       {
@@ -265,7 +265,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "three.js",
+        name: "Three.js",
         color: "green-text-gradient",
       },
       {
@@ -306,11 +306,11 @@ const projects = [
       "This project is a full-stack application that allows users to create, view, update, and delete places. It consists of a backend API built with Node.js, Express.js, and MongoDB, and a frontend user interface built with React.js.",
     tags: [
       {
-        name: "react.js",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Mongodb",
         color: "green-text-gradient",
       },
       {

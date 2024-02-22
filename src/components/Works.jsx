@@ -26,7 +26,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl   sm:w-[360px] w-full"
       >
         <div
           onClick={() => window.open(demoLink, "_blank")}
@@ -77,7 +77,7 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -97,6 +97,67 @@ const Works = () => {
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
+        <motion.div variants={fadeIn("up", "spring", 6 * 0.5, 0.75)}>
+          <Tilt
+            options={{
+              max: 45,
+              scale: 1,
+              speed: 450,
+            }}
+            className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full !min-h-[470px]"
+          >
+            <div
+              onClick={() =>
+                window.open("https://github.com/Aliozzaim", "_blank")
+              }
+              className="relative w-full h-[230px] cursor-pointer"
+            >
+              <img
+                src={
+                  "https://i.vimeocdn.com/video/56103338-2fd3666542743f00230d19581a3cce34b5e6f7d29f2da1feee57bd496f25ba4d-d_750x421.875?q=60"
+                }
+                alt="project_image"
+                className="w-full h-full object-fit rounded-2xl"
+              />
+
+              <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                {/* <div
+                  onClick={() =>
+                    window.open("https://github.com/Aliozzaim", "_blank")
+                  }
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                ></div> */}
+              </div>
+            </div>
+            <div className="mt-5">
+              <h3 className="text-white font-bold text-[24px]">
+                Exciting New Project on the Horizon
+              </h3>
+              <p className="mt-2 text-secondary text-[14px]">
+                I'm currently working on a new project. Stay tuned for updates!
+              </p>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <p className="text-[14px] blue-text-gradient">#TypeScript</p>
+              <p className="text-[14px] green-text-gradient">#Mongodb</p>
+              <p className="text-[14px] pink-text-gradient">#Express.js</p>
+            </div>
+            <div className="relative w-full h-[38px] border-[3px] border-gray-300 rounded-full mt-[20px] overflow-hidden">
+              <p className="absolute top-[-3px] left-0 w-full h-full flex items-center justify-center text-white font-bold text-[14px] ">
+                Coming soon
+              </p>
+              <motion.div
+                initial={{ width: "0%" }}
+                animate={{ width: "90%" }}
+                transition={{
+                  duration: 13,
+                  repeatType: "reverse",
+                }}
+                className="absolute top-0 left-0 w-[30%] h-[19%] mt-[27px] bg-green-500 rounded-full"
+              ></motion.div>
+            </div>
+          </Tilt>
+        </motion.div>
       </div>
     </>
   )

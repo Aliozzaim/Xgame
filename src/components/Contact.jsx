@@ -1,78 +1,78 @@
 /* eslint-disable */
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import Animation from "./Animation";
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+import React, { useRef, useState } from "react"
+import { motion } from "framer-motion"
+import emailjs from "@emailjs/browser"
+import Animation from "./Animation"
+import { styles } from "../styles"
+import { EarthCanvas } from "./canvas"
+import { SectionWrapper } from "../hoc"
+import { slideIn } from "../utils/motion"
 
 const Contact = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
-  const formRef = useRef();
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState("")
+  const formRef = useRef()
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
-  });
+  })
 
   const [errors, setErrors] = useState({
     name: "",
     email: "",
     message: "",
-  });
+  })
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { target } = e
+    const { name, value } = target
 
     setForm({
       ...form,
       [name]: value,
-    });
+    })
 
     setErrors({
       ...errors,
       [name]: "",
-    });
-  };
+    })
+  }
 
   const validateForm = () => {
-    let isValid = true;
-    const newErrors = {};
+    let isValid = true
+    const newErrors = {}
 
     if (!form.name.trim()) {
-      newErrors.name = "Name is required";
-      isValid = false;
+      newErrors.name = "Name is required"
+      isValid = false
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!form.email.trim() || !emailRegex.test(form.email)) {
-      newErrors.email = "Valid email is required";
-      isValid = false;
+      newErrors.email = "Valid email is required"
+      isValid = false
     }
 
     if (!form.message.trim()) {
-      newErrors.message = "Message is required";
-      isValid = false;
+      newErrors.message = "Message is required"
+      isValid = false
     }
 
-    setErrors(newErrors);
-    return isValid;
-  };
+    setErrors(newErrors)
+    return isValid
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!validateForm()) {
-      return;
+      return
     }
 
-    setLoading(true);
+    setLoading(true)
 
     emailjs
       .send(
@@ -92,22 +92,22 @@ const Contact = () => {
           name: "",
           email: "",
           message: "",
-        });
+        })
         setTimeout(() => {
-          setLoading(false);
-        }, 1100);
+          setLoading(false)
+        }, 1100)
         setSubmitMessage(
           "Thank you. I will get back to you as soon as possible."
-        );
-        setIsSubmitted(true);
+        )
+        setIsSubmitted(true)
       })
       .catch((error) => {
-        setIsSubmitted(true);
-        setLoading(false);
-        console.error(error);
-        setSubmitMessage("Ahh, something went wrong. Please try again.");
-      });
-  };
+        setIsSubmitted(true)
+        setLoading(false)
+        console.error(error)
+        setSubmitMessage("Ahh, something went wrong. Please try again.")
+      })
+  }
 
   return (
     <div
@@ -118,7 +118,7 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <form
           ref={formRef}
@@ -190,7 +190,7 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, "contact")
