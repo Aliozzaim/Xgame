@@ -143,7 +143,7 @@ const Works = () => {
               <p className="text-[14px] pink-text-gradient">#Express.js</p>
             </div>
             <div className="relative w-full h-[38px] border-[3px] border-gray-300 rounded-full mt-[20px] overflow-hidden">
-              <p className="absolute top-[-3px] left-0 w-full h-full flex items-center justify-center text-white font-bold text-[14px] ">
+              <p className="absolute top-[-3px] left-0 w-full h-full flex items-center justify-center text-white  text-[14px] ">
                 Coming soon
               </p>
               <motion.div
