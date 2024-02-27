@@ -28,6 +28,7 @@ import nakilport from "../assets/nakilport2.png"
 import MercanSoft from "../assets/mercansoft.png"
 import ecommerce from "../assets/art.png"
 import garden from "../assets/garden.png"
+import faycalWP2 from "../assets/falcalWP2.png"
 
 export const navLinks = [
   {
@@ -276,6 +277,28 @@ const projects = [
     demoLink: "https://3d-gallery-lime.vercel.app/",
     image: ecommerce,
     source_code_link: "https://3d-gallery-lime.vercel.app/",
+  },
+  {
+    name: "Portfolio Website",
+    description:
+      "This project a modern and interactive portfolio website built with React.js, Three Fiber, and Framer Motion. With a sleek design and smooth animations, the website effectively highlights my projects, expertise, and achievements.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Three Fiber",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://faycal-djanane.vercel.app/",
+    image: faycalWP2,
+    source_code_link: "https://github.com/Aliozzaim/FaycalDjanane",
   },
   {
     name: "Garden Planner",
